@@ -8,13 +8,17 @@ This project implements a high-performance machine learning pipeline to predict 
 * **Clinical Calibration:** Implemented a custom classification threshold of **0.2** to minimize life-threatening False Negatives, prioritizing patient safety over balanced accuracy.
 * **Significance Analysis:** Utilized Random Forest feature importance to identify the top three clinical predictors: **Age, Average Glucose Level, and BMI**.
 
+### 📊 Dataset
+The data used in this study is the **Stroke Prediction Dataset** sourced from Kaggle. It includes 5,110 observations with 12 clinical features.
+* **Source:** [Kaggle - Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
+
 ### 🛠️ Technical Stack
 * **Language:** Python
 * **Libraries:** Scikit-Learn, Pandas, NumPy, Matplotlib, Seaborn
 * **Optimization:** GridSearchCV for hyperparameter tuning
 * **Environment:** Google Colab / Jupyter Notebook
 
-### 📊 Key Findings
+### 📈 Key Findings
 The analysis determined that while all models showed high predictive potential, the **Random Forest** model with an adjusted threshold provided the best balance for clinical application. By shifting the decision boundary, the system achieved a significantly higher **Recall**, effectively flagging high-risk cases that standard 0.5 threshold models would have overlooked.
 
 ---
@@ -22,4 +26,4 @@ The analysis determined that while all models showed high predictive potential, 
 ### 📂 Repository Structure
 * `GPU Accelerated ML.ipynb`: Main Jupyter Notebook containing the end-to-end pipeline.
 * `healthcare-dataset-stroke-data.csv`: Source clinical dataset.
-* `visualizations/`: Exported Confusion Matrices and Feature Importance plots.
+* `script.py`: Pre-processing of data: exploratory data analysis (EDA), generates feature correlation heatmap
